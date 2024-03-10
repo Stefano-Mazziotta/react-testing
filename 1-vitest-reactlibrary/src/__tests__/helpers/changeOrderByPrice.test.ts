@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+import { describe, expect } from "vitest";
 
 import { changeOrderByPrice } from "../../helpers/changeOrderByPrice";
 import { product } from "../../models/product";

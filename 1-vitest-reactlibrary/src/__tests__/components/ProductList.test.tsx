@@ -1,10 +1,10 @@
-import { describe, it, expect } from "vitest";
+import { describe, test, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { ProductList } from "../../components/ProductList";
 import { mockProducts } from "../mocks/products.mock";
 
 describe("<ProductList />", () => {
-  it("Should render a list of products", () => {
+  test("Should render a list of products", () => {
     const { length } = mockProducts;
 
     render(<ProductList items={mockProducts} />);
@@ -13,7 +13,7 @@ describe("<ProductList />", () => {
     expect(products).toHaveLength(length);
   });
 
-  it("should match snapshot", () => {
+  test("should match snapshot", () => {
     render(<ProductList items={mockProducts} />);
     expect(screen.getByRole("list")).toMatchSnapshot();
   });
