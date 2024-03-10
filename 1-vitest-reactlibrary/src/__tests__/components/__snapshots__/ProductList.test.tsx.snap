@@ -1,0 +1,27 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<ProductList /> > should match snapshot 1`] = `
+<ul>
+  <li
+    value="Jamón Ibérico"
+  >
+    Jamón Ibérico
+     $
+    200
+  </li>
+  <li
+    value="Jamón Serrano"
+  >
+    Jamón Serrano
+     $
+    100
+  </li>
+  <li
+    value="Jamón Cocido"
+  >
+    Jamón Cocido
+     $
+    50
+  </li>
+</ul>
+`;

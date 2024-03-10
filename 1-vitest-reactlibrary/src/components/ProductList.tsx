@@ -1,12 +1,15 @@
 import { product } from "../models/product";
 
-export function ProductList({ items }: { items: product[] }) {
+type productListProps = { items: product[] };
+
+export function ProductList({ items }: productListProps) {
   return (
     <ul>
-      {items.map((item, index) => {
+      {items.map((item) => {
+        const { name, price, id } = item;
         return (
-          <li key={index}>
-            {item.name} ${item.price}
+          <li key={id} value={name}>
+            {name} ${price}
           </li>
         );
       })}

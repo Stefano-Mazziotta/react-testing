@@ -16,7 +16,10 @@ function App() {
   return (
     <div className="">
       <ProductList items={products} />
-      <button onClick={() => setProducts(changeOrderByPrice(products))}>
+      <button
+        className="btn"
+        onClick={() => setProducts(changeOrderByPrice(products))}
+      >
         Order by price
       </button>
     </div>

@@ -1,27 +1,11 @@
 import { describe, it, expect } from "vitest";
+
 import { changeOrderByPrice } from "../../helpers/changeOrderByPrice";
 import { product } from "../../models/product";
-
-const mockProducts: product[] = [
-  {
-    id: 2,
-    name: "Jamón Ibérico",
-    price: 200,
-  },
-  {
-    id: 1,
-    name: "Jamón Serrano",
-    price: 100,
-  },
-  {
-    id: 3,
-    name: "Jamón Cocido",
-    price: 50,
-  },
-];
+import { mockProducts } from "../mocks/products.mock";
 
 describe("changeOrderByPrice", () => {
-  it("Should order all products by price in descending order", () => {
+  test("Should order all products by price in descending order", () => {
     const result = changeOrderByPrice(mockProducts);
     const cheaperProduct: product = {
       id: 3,
