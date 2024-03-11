@@ -1,11 +1,5 @@
 import { describe, test, expect } from "vitest";
-import {
-  act,
-  fireEvent,
-  render,
-  screen,
-  waitFor,
-} from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { Accordion } from "../../components/Accordion";
 
 describe("<Accordion />", () => {
